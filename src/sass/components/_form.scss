@@ -1,0 +1,14 @@
+.form {
+  .submit-field {
+    margin: 4rem auto 0 auto;
+  }
+
+  &-label {
+    display: block;
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+  }
+
+}

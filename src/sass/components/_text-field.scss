@@ -1,0 +1,46 @@
+.text-field {
+  position: relative;
+
+  .input {
+    border-radius: 2px;
+    border: 1px solid $alto;
+    display: block;
+    font-size: 1.4rem;
+    height: 4rem;
+    padding-left: 0.5rem;
+    width: 100%;
+
+    &::placeholder {
+      font-size: 1.4rem;
+      opacity: 0.5;
+    }
+
+    &--spaced {
+      padding-left: 5rem;
+    }
+
+    &--error {
+      border: 1px solid $milano-red;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .prepend-icon {
+    align-items: center;
+    background: rgba($alto, 0.45);
+    display: flex;
+    height: 4rem;
+    justify-content: center;
+    position: absolute;
+    width: 4.4rem;
+    border-right: 1px solid $alto;
+
+    i {
+      font-size: 2rem;
+      margin-top: 0.5rem;
+    }
+  }
+}

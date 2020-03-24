@@ -1,28 +1,35 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app" class="app">
+    <div class="section">
+      <h2 class="heading-secondary">Vue form with schemas</h2>
+      <Form :model="fields" :schema="schema" @modelChange="handleModelChange" @submit="onSubmit" />
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue';
+import { Form } from '@/components';
+
+import schema from './schema';
 
 export default {
   name: 'App',
+  data() {
+    return {
+      fields: {},
+      schema,
+    };
+  },
   components: {
-    HelloWorld,
+    Form,
+  },
+  methods: {
+    onSubmit() {
+      alert('Submited!');
+    },
+    handleModelChange(model) {
+      this.fields = model;
+    },
   },
 };
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>

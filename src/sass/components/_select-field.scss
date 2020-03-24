@@ -1,0 +1,24 @@
+.select-field {
+  .Select__Label {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .Select__Select {
+    border-radius: 2px;
+    height: 4rem;
+  }
+
+  .vs__selected-options {
+    font-size: 1.4rem;
+  }
+  .vs__dropdown-menu {
+    font-size: 1.4rem;
+  }
+
+  &--error {
+    .Select__Select {
+      border: 1px solid $milano-red;
+    }
+  }
+}

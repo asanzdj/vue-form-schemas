@@ -1,0 +1,22 @@
+.row {
+  margin: 0 auto;
+  max-width: $grid-width;
+
+  &:not(:last-child) {
+    margin-bottom: $gutter-vertical;
+  }
+
+  @include clearfix();
+
+  /*
+  ^ -> classes starting with this statement
+  * -> classes contains this statement
+*/
+  [class^="col-"] {
+    float: left;
+
+    &:not(:last-child) {
+      margin-right: $gutter-horizontal;
+    }
+  }
+}

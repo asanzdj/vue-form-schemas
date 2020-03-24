@@ -1,0 +1,36 @@
+.button {
+  background: $galliano;
+  border-radius: 5rem;
+  border: none;
+  color: $white;
+  cursor: pointer;
+  display: block;
+  font-size: 2rem;
+  font-weight: 600;
+  height: 5rem;
+  line-height: 5rem;
+  min-width: 25rem;
+  padding-left: 4rem;
+  padding-right: 4rem;
+  padding-top: 0.1rem;
+  text-transform: uppercase;
+
+  &:hover {
+    background: darken($galliano, 5%);
+  }
+
+  &--loading {
+    pointer-events: none;
+    background: $alto;
+  }
+
+  .CircleSpinner {
+    height: 2.8rem;
+    margin-top: 1.3rem;
+    width: 2.8rem;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
