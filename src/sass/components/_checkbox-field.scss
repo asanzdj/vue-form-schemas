@@ -39,7 +39,7 @@ $error-margin: calc(#{$label-width} + #{$label-left-padding} + #{15px});
     &--error {
       &:after {
       }
-      border: $milano-red;
+      border: $grenadier;
     }
 
     &:before,
@@ -60,7 +60,7 @@ $error-margin: calc(#{$label-width} + #{$label-left-padding} + #{15px});
     }
 
     &--error {
-      color: $milano-red;
+      color: $grenadier;
     }
   }
 }

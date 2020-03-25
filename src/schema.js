@@ -29,7 +29,7 @@ export default [
     name: 'email',
     placeholder: 'pepa@pig.es',
     type: 'TextField',
-    validator: [noSpecialCharsValidator, requireValidator],
+    validator: [emailValidator, requireValidator],
   },
   {
     inputType: 'email',
@@ -37,7 +37,7 @@ export default [
     name: 'emailRepeat',
     placeholder: 'pepa@pig.es',
     type: 'TextField',
-    validator: [emailValidator, twinValidator('email', 'email'), requireValidator],
+    validator: [twinValidator('email', 'email')],
   },
   {
     inputType: 'password',
@@ -45,7 +45,7 @@ export default [
     name: 'password',
     placeholder: '********',
     type: 'TextField',
-    validator: [passwordValidator, twinValidator('password', 'password'), requireValidator],
+    validator: [passwordValidator, requireValidator],
   },
   {
     inputType: 'password',
@@ -53,7 +53,7 @@ export default [
     name: 'passwordRepeat',
     placeholder: '********',
     type: 'TextField',
-    validator: [passwordValidator, twinValidator('password', 'password'), requireValidator],
+    validator: [twinValidator('password', 'password')],
   },
   {
     loading: false,
